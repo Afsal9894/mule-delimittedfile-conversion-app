@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: Delimited File Coversion
+version: v1
+baseUri: http://localhost:8081/api/demo
+
+/orders:
+  post:
+    description: Used for Converting delimited file to JSON
+    displayName: Delimited File to JSON
+    body:
+      multipart/form-data:
+        properties:
+          orders:
+            description: The orders file to be uploaded
+            required: true
+            type: file
